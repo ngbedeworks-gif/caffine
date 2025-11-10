@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafine</title>
+  <link rel="stylesheet" href="cafine.css">
+</head>
+<body>
+  <header>
+    <div class="navbar-container">
+      <nav>
+        <div class="logo">
+          <img src="afro-nature.svg" alt="Site Logo">
+        </div>
+
+        <button class="navbar-toggle" id="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Article</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Welcome to Cafine</h1>
+  </main>
+
+  <footer></footer>
+
+  <!-- ✅ JS for toggle -->
+  <script>
+    const toggle = document.getElementById('navbar-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
