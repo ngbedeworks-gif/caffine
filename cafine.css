@@ -2,14 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222;
-  color: white;
+  background-color: #6F4E37;
+  color: #FFFDD0;
   padding: 10px 40px;
 }
 
@@ -35,13 +36,13 @@ nav {
 }
 
 .nav-links a {
-  color: white;
+  color: #FFFDD0;
   text-decoration: none;
   font-weight: 500;
 }
 
 .nav-links a:hover {
-  color: #ff9800;
+  color: #CC7F3B;
 }
 
 /* Hamburger button */
@@ -57,7 +58,7 @@ nav {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background: floralwhite;
+  background: #FFFDD0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -68,12 +69,12 @@ nav {
   }
 
   .nav-links {
-    position: absolute;
+    position: fixed;
     top: 60px;
     right: -100%;
     flex-direction: column;
     align-items: flex-start;
-    background: #222;
+    background: #6F4E37;
     width: 200px;
     height: 100vh;
     padding: 3rem 1.5rem;
@@ -96,5 +97,187 @@ nav {
   }
   .navbar-toggle.open .bar:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+
+/* --- Hero Section Layout --- */
+.hero {
+  display: flex;
+  align-items: center;        /* Centers text and image vertically */
+  justify-content: space-between;
+  background-color: #FFFDD0;
+  padding: 90px 15%;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  font-family: linotype-didot, serif;
+font-style: normal;
+font-weight: 400;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero-text span {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #D2691E; /* Caramel highlight */
+}
+
+.hero-text p {
+font-family: geographica, sans-serif;
+font-style: normal;
+font-weight: 400;
+  color: #4B3621;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+  background-color: #D2691E;
+  color: #FFFDD0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #FFB74D;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #D2691E;
+  color: #D2691E;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-outline:hover {
+  background-color: #D2691E;
+  color: #FFFDD0;
+}
+
+/* --- Image Section --- */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
+}
+.circle {
+  width: 300px;          /* Fixed size for the circle */
+  height: 300px;         /* Same as width = perfect circle */
+  border-radius: 50%;    /* Makes it circular */
+  overflow: hidden;      /* Hides anything outside the circle */
+}
+
+/* Image Inside */
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Prevents stretching */
+}
+
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+}
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 10%;
+  background-color: #fffaf3;
+  gap: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.intro-content {
+  flex: 1;
+  font-family: 'Georgia', serif;
+  color: #3b2f2f;
+  line-height: 1.8;
+}
+
+.intro-content h2 {
+  font-size: 2.5rem;
+  color: #4b3621;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.intro-content p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  height: auto;
+}
+
+/* ✅ Responsive fix for mobile */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+    width: 100%;
+  }
+
+  .intro-content {
+    width: 100%;
+  }
+
+  .intro-image {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .intro-image img {
+    max-width: 300px;
+    width: 80%;
+    margin: 0 auto;
   }
 }
